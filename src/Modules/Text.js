@@ -12,6 +12,8 @@ const TextSchema = new mongoose.Schema(
         fr:String,
         ar:String
     },
-    text:String ,
-} ); 
+  
+},
+        {container:'texts'} 
+ ); 
 module.exports = Text = mongoose.model('Text', TextSchema);
