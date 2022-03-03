@@ -5,11 +5,11 @@ const Text = require('../../Modules/Text');
 const { populate } = require('../../Modules/Text');
 let JsLingua = require('jslingua');
 
-//@rout GET 
+//@rout GET  
 //get the most occured in the DB 
 //Public
 
-router.get('/', async(req,res)=>{
+router.get('/mostOccurrent', async(req,res)=>{
      try {
          await Text.find.exec((texts)=>{
              const mostOccuredWrold = getMostoccuredWorldDB(texts); 

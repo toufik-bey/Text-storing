@@ -11,7 +11,7 @@ function wordCount(str) {
     return str.split(" ").length;
   }
   
-  router.get('/:textId/count', async(req, res) => {
+  router.get('/:textId/count/:language', async(req, res) => {
 	const textId = req.params.textId;
 
 	try {
