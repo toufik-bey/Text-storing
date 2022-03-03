@@ -21,7 +21,7 @@ router.get('/mostOccurrent', async(req,res)=>{
 })
 
 module.exports = router; 
-
+// the function to get the most occure word in the DB 
 function getMostoccuredWorldDB(texts) {
 
     const EngWordsMap = new wordMap(); 
@@ -80,7 +80,7 @@ function populateFraWordsMap(text, FraWordsMap) {
 		else FraWordsMap.initWordCount(word);
 	});
 }
-function populateFraWordsMap(text, ArabWordsMap) {
+function populateAraWordsMap(text, ArabWordsMap) {
 	const ArabTextLowerCased = text.version.ar.toLowerCase();
     
 	
@@ -92,6 +92,8 @@ function populateFraWordsMap(text, ArabWordsMap) {
 		else ArabWordsMap.initWordCount(word);
 	});
 }
+
+// the function to get the most occure word in each language 
 function getMostOccurentWordsFromTopWordsLanguages(
 	topWordsLanguages,
 	maxOccurenceInDatabaseCount
