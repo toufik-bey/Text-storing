@@ -12,6 +12,10 @@ connectDB();
 // bring routes
 app.use('/text', require('./routes/api/PostText')); 
 app.use('/text',  require('./routes/api/TextStatus'));
+app.use('/text',  require('./routes/api/UpdateText'));
+app.use('/text',  require('./routes/api/CountWords'));
+//app.use('/text',  require('./routes/api/GetText'));
+app.use('/text/mostOccurrent',  require('./routes/api/getMostoccuredWord'));
 
 
 
